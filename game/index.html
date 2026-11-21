@@ -1,0 +1,32 @@
+<!doctype html>
+<!-- Twin Tides — Spot the Difference: page shell. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Twin Tides — Spot the Difference</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #101c26; font-family: Georgia, 'Times New Roman', serif; }
+  #wrap { width: 1280px; margin: 0 auto; }
+  #game { display: block; width: 1280px; height: 720px; background: #0e1a24; cursor: crosshair; touch-action: none; }
+  #bar { display: flex; gap: 12px; padding: 10px 0; justify-content: center; }
+  button { font-family: inherit; font-size: 16px; padding: 8px 22px; border-radius: 999px; border: 2px solid #e8c97a; background: #1d3247; color: #f5e9c8; cursor: pointer; }
+  button:hover { background: #2a4763; }
+  button:disabled { opacity: 0.4; cursor: default; }
+  #status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="1280" height="720" aria-label="Twin Tides: spot the difference between two pictures of a seaside cove"></canvas>
+  <div id="bar">
+    <button id="hintBtn" type="button">Hint (H)</button>
+    <button id="restartBtn" type="button">Restart level (R)</button>
+    <button id="nextBtn" type="button">Next level (N)</button>
+  </div>
+</div>
+<p id="status" role="status" aria-live="polite"></p>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
